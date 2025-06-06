@@ -1,15 +1,16 @@
 `timescale 1ns / 1ps
 
-module one_bit_PUF(challenge, out, clk, reset);
+module one_bit_PUF(en, challenge, out, clk, reset);
     input [0:7] challenge;
     output out;
+    input en;
     input wire clk;
     input wire reset;
     
-    wire [15:0] enables1;      //output of decoder
+    //wire [15:0] enables1;      //output of decoder
     wire [15:0] ro_outputs1;   //output of each RO
     
-    wire [15:0] enables2;      //output of decoder
+   // wire [15:0] enables2;      //output of decoder
     wire [15:0] ro_outputs2;   //output of each RO
     
     wire mux_output1;
@@ -27,14 +28,12 @@ module one_bit_PUF(challenge, out, clk, reset);
         challenge2 = challenge[4:7]; // LSB 4 bits
     end
     
-    decoder4to16 decoder_one(.inp(challenge1), .out(enables1));
-    decoder4to16 decoder_two(.inp(challenge2), .out(enables2));
     
     genvar i;
     generate
         for (i = 0; i < 16; i = i + 1) begin : ro_array1
-            ro ro_inst (
-                .en(enables1[i]),
+            ring_oscillator ro_inst (
+                .en(en),
                 .out(ro_outputs1[i])
             );
         end
@@ -43,8 +42,8 @@ module one_bit_PUF(challenge, out, clk, reset);
     genvar j;
     generate
         for (j = 0; j < 16; j = j + 1) begin : ro_array2
-            ro ro_inst (
-                .en(enables2[j]),
+            ring_oscillator  ro_inst (
+                .en(en),
                 .out(ro_outputs2[j])
             );
         end
