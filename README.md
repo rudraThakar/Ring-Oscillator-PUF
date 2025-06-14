@@ -5,4 +5,4 @@ PUF stands for Physically Unclonable Functions. They are used as the "fingerprin
 
 - Here, we will focus on a type of PUF called the Ring Oscillator PUF. It uses a ring Oscillator (chain of inverter gates) at its core principle.
 
-### How dos a Ring-socillator Based PUF work?
+### How dos a Ring-oscillator Based PUF work?
