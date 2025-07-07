@@ -10,4 +10,7 @@ PUF stands for Physically Unclonable Functions. They are used as the "fingerprin
 - Thus, a Ring Oscllator, made by odd numbers of Inverter Gates will also have a unique frequency of Oscillation (which is due to the differnet delays that each inverter has, due to its manufacturing).
 - We use this fact and compare the frequency of 2 Ring Oscillator (say A and B) and generate a response bit (r[0])
 - r[0] = 0 if frea(A) > frea(B)
-- r[0] = 1 if freq(A) <freq(B)
+- r[0] = 1 if freq(A) <freq(B
+
+
+# Configurable Ring Oscillator PUF
