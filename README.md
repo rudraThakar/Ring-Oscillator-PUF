@@ -29,7 +29,7 @@ PUF stands for Physically Unclonable Functions. They are used as the "fingerprin
   
 ![cro](assets/final_cro.png)
 
-- Here, based on the selection bits (c1, c2, c3) we can choose the oscillation path.
+- Here, based on the selection bits (c0, c1, c2) we can choose the oscillation path.
 - The design used to generate 1 bit PUF using CRO is as follows:
 
   
