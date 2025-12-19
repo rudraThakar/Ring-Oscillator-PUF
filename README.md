@@ -24,12 +24,15 @@ PUF stands for Physically Unclonable Functions. They are used as the "fingerprin
 # Configurable Ring Oscillator PUF
 
 - Configurable Ring Osillator based PUF's are currently being explored and studied as an better alternative to the standard PUF's. The main advantage is that we can re-configure the oscillation path and create new oscillation paths with the same set of inverter gates.
+- The design of the CRO is as follows:
 
-- The design of the CRO is as follows:-
+  
 ![cro](assets/final_cro.png)
-- Here, based on the selection bits (c1, c2, c3) we can choose the oscillation path.
 
-- The design used to generate 1 bit PUF using CRO is as follows:-
+- Here, based on the selection bits (c1, c2, c3) we can choose the oscillation path.
+- The design used to generate 1 bit PUF using CRO is as follows:
+
+  
 ![cro](assets/cro_block.png)
 
 
