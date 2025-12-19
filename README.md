@@ -23,4 +23,8 @@ PUF stands for Physically Unclonable Functions. They are used as the "fingerprin
 
 # Configurable Ring Oscillator PUF
 
-![cro](assets/cro.drawio.png)
+- Configurable Ring Osillator based PUF's are currently being explored and studied as an better alternative to the standard PUF's. The main advantage is that we can re-configure the oscillation path and create new oscillation paths with the same set of inverter gates.
+
+![cro](assets/cro_block.drawio (1).png)
+
+![cro](assets/final_cro.drawio (1) (1).png)
